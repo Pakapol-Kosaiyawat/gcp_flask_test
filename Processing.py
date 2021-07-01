@@ -158,9 +158,7 @@ def detect_similarity(Article):
         duplicate_list.append(duplicate)
         
     #select highest score source
-    token_article = word_tokenize(Article, keep_whitespace=True, engine="newmm")
     Max_score = max(url_score_list)
-    Max_para = most_sim_list[url_score_list.index(max(url_score_list))]
     tokenized_maxpara = word_tokenize(most_sim_list[url_score_list.index(max(url_score_list))], keep_whitespace=True, engine="newmm")
     Max_url = urls[url_score_list.index(max(url_score_list))]
     duplicate = duplicate_list[url_score_list.index(max(url_score_list))]
