@@ -22,8 +22,8 @@ html,body{
 }
 
 .link_button:link,link_button:visited{
-    background-color: green;
-    color: white;
+    background-color: white;
+    color: green;
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
