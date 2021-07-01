@@ -7,51 +7,9 @@ import Processing
 app = Flask(__name__)
 app.config["CACHE_TYPE"] = "null"
 
-data = [
-        {
-            "id": 1,
-            "library": "pythainlp",
-            "language": "Python"
-        },
-        {
-            "id": 2,
-            "library": "math",
-            "language": "Python"
-        },
-        {
-            "id": 3,
-            "library": "googlesearch",
-            "language": "Python"
-        },
-        {
-            "id": 4,
-            "library": "bs4",
-            "language": "Python"
-        },
-        {
-            "id": 5,
-            "library": "re",
-            "language": "Python"
-        },
-        {
-            "id": 6,
-            "library": "requests",
-            "language": "Python"
-        },
-        {
-            "id": 7,
-            "library": "urllib3",
-            "language": "Python"
-        }
-    ]
-
 @app.route('/')
 def index():
     return render_template('index.html',alert="")
-
-@app.route('/api', methods=['GET'])
-def get_api():
-    return jsonify(data)
 
 @app.route('/', methods=['POST'])
 def my_form_post():
