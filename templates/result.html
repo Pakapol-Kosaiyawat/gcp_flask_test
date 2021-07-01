@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='en' dir='ltr'>
+    <head>
+        <meta charset='utf-8'>
+        <title>Check Plagiarism</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+        <center>
+            <br><br>
+            <h1>คะแนนความใกล้เคียง:</h1>
+            <h1>{{score}}</h1>
+            <br><br>
+            <p>จากข้อมูลต้นฉบับ:</p>
+        </center>
+            <p id = "input_text">{{Paragraph}}</p>
+        <center>
+            <br><br>
+            <p>เมื่อเปรียบเทียบด้วยย่อหน้า: </p>
+        </center>
+            <p id = "relate_text">{{Paragraph_relate}}</p>
+            <p id = "duplicate_text" hidden>{{duplicate}}</p>
+            <script src = "/static/js/result.js"></script>  
+        <center>        
+            <p>จาก</p>
+        </center>
+            <a href={{url}} target="_blank">{{url}}</a>
+        <center>
+            <br><br>
+            <br><br>
+            <a href="/" class="link_button">กลับหน้าหลัก</a>
+        </center>
+    </body>
+</html>
