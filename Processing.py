@@ -66,7 +66,7 @@ def detect_similarity(Article):
     #get 3 urls relate article
     def search_relate(query) :  
         urls = []
-        for j in search(query, num=10, stop=10, pause=2):
+        for j in search(query, num=10 , stop=10, pause=2):
             if('.pdf'not in j and '/file?type=supplementary'not in j and 'siam.wiki'not in j and 'download' not in j):
                 if(len(urls) == 0):
                     urls.append(j)
@@ -153,14 +153,15 @@ def detect_similarity(Article):
                         most_sim = clean_text
                         duplicate = check_result[1]
         
-        most_sim_list.append(most_sim)
+        most_sim_list.append(word_tokenize(most_sim, keep_whitespace=True, engine="newmm"))
         url_score_list.append(url_simi_score)
         duplicate_list.append(duplicate)
+    
         
     #select highest score source
-    Max_score = max(url_score_list)
-    tokenized_maxpara = word_tokenize(most_sim_list[url_score_list.index(max(url_score_list))], keep_whitespace=True, engine="newmm")
-    Max_url = urls[url_score_list.index(max(url_score_list))]
-    duplicate = duplicate_list[url_score_list.index(max(url_score_list))]
+    Max_score = url_score_list
+    tokenized_maxpara = most_sim_list
+    Max_url = urls
+    duplicate = duplicate_list
     
     return ([Article,tokenized_maxpara,Max_url,Max_score,duplicate])

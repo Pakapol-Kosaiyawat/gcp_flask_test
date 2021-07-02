@@ -25,7 +25,7 @@ def my_form_post():
         return render_template('result.html',Paragraph=processed_text[0]
                                ,Paragraph_relate=processed_text[1]
                                ,url=processed_text[2]
-                               ,score=str(round(processed_text[3]*100))
+                               ,score=processed_text[3]
                                ,duplicate = processed_text[4])
     
 @app.after_request
