@@ -2,7 +2,7 @@
 '''
 in spyder flask using localhost:5000 to open page
 '''
-from flask import Flask,render_template, request ,jsonify
+from flask import Flask,render_template, request
 import Processing
 app = Flask(__name__)
 app.config["CACHE_TYPE"] = "null"

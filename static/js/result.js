@@ -1,8 +1,8 @@
-var str_rel = document.getElementById("relate_text").innerHTML;
-var str_dup = document.getElementById("duplicate_text").innerHTML;
+let str_rel = document.getElementById("relate_text").innerHTML;
+let str_dup = document.getElementById("duplicate_text").innerHTML;
 
-var score = document.getElementById("score").innerHTML;
-var urls = document.getElementById("urls").innerHTML;
+let score = document.getElementById("score").innerHTML;
+let urls = document.getElementById("urls").innerHTML;
 
 for (let index in str_rel){
     str_rel[index] = str_rel[index].replace("[","");
@@ -26,8 +26,11 @@ for (let index in str_rel){
         } else {
           str += relate[text] ;
         }
-    };
+    }
+    console.log(str);
+    console.log(score[index]);
+    console.log(url[index]);
     document.getElementById("relate_text").innerHTML += str;   
     document.getElementById("score").innerHTML += score[index];
     document.getElementById("urls").innerHTML += url[index];
-};
+}
