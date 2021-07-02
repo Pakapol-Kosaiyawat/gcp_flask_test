@@ -21,10 +21,10 @@ for (let index in str_rel){
     
     let str = "";
     for (let text in relate_list){
-        if (duplicate.includes(relate[text])) {
-          str += '<mark>'+relate[text]+'</mark>';
+        if (duplicate.includes(relate_list[text])) {
+          str += '<mark>'+relate_list[text]+'</mark>';
         } else {
-          str += relate[text] ;
+          str += relate_list[text] ;
         }
     }
     console.log(str);
