@@ -31,18 +31,18 @@ for (let index in str_rel){
     
     let str = "";
     for (let text in relate_list[index]){
-        if (duplicate.includes(relate_list[text])) {
-          str += '<mark>'+relate_list[text]+'</mark>';
+        if (duplicate[index].includes(relate_list[index][text])) {
+          str += '<mark>'+relate_list[index][text]+'</mark>';
         } else {
-          str += relate_list[text] ;
+          str += relate_list[index][text] ;
         }
     }
     console.log(str);
-	console.log(arr_relate);
-	console.log(arr_duplicate);
-    console.log(arr_score);
-    console.log(arr_urls);
+	console.log(arr_relate[index]);
+	console.log(arr_duplicate[index]);
+    console.log(arr_score[index]);
+    console.log(arr_urls[index]);
     document.getElementById("relate_text").innerHTML += str;   
-    document.getElementById("score").innerHTML += arr_score;
-    document.getElementById("urls").innerHTML += arr_urls;
+    document.getElementById("score").innerHTML += arr_score[index];
+    document.getElementById("urls").innerHTML += arr_urls[index];
 }
