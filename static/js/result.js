@@ -12,9 +12,19 @@ for (let index in str_rel){
     str_dup[index] = str_dup[index].replace("[","");
     str_dup[index] = str_dup[index].replace("]","");
     str_dup[index] = str_dup[index].replaceAll("'","");
+
+	score[index] = score[index].replace("[","");
+    score[index] = score[index].replace("]","");
+    score[index] = score[index].replaceAll("'","");
+	
+	urls[index] = urls[index].replace("[","");
+    urls[index] = urls[index].replace("]","");
+    urls[index] = urls[index].replaceAll("'","");
     
     const arr_relate =  str_rel[index].split(", ");
     const arr_duplicate =  str_dup[index].split(", ");
+	const arr_score =  score[index].split(", ");
+    const arr_urls =  urls[index].split(", ");
     
     const relate_list = arr_relate;
     const duplicate = arr_duplicate;
@@ -28,9 +38,9 @@ for (let index in str_rel){
         }
     }
     console.log(str);
-    console.log(score[index]);
-    console.log(url[index]);
+    console.log(arr_score);
+    console.log(arr_urls);
     document.getElementById("relate_text").innerHTML += str;   
-    document.getElementById("score").innerHTML += score[index];
-    document.getElementById("urls").innerHTML += url[index];
+    document.getElementById("score").innerHTML += arr_score;
+    document.getElementById("urls").innerHTML += arr_urls;
 }
