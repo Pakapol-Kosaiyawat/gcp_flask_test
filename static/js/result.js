@@ -27,7 +27,7 @@ const arr_urls =  urls.split(", ");
 const relate_list = arr_relate;
 const duplicate = arr_duplicate;
 	
-for (let index in str_rel){
+for (let index in relate_list){
     
     let str = "";
     for (let text in relate_list[index]){
