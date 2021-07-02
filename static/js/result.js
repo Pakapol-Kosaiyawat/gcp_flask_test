@@ -4,33 +4,33 @@ let str_dup = document.getElementById("duplicate_text").innerHTML;
 let score = document.getElementById("score").innerHTML;
 let urls = document.getElementById("urls").innerHTML;
 
-for (let index in str_rel){
-    str_rel[index] = str_rel[index].replace("[","");
-    str_rel[index] = str_rel[index].replace("]","");
-    str_rel[index] = str_rel[index].replaceAll("'","");
+str_rel = str_rel.replace("[","");
+str_rel = str_rel.replace("]","");
+str_rel = str_rel.replaceAll("'","");
     
-    str_dup[index] = str_dup[index].replace("[","");
-    str_dup[index] = str_dup[index].replace("]","");
-    str_dup[index] = str_dup[index].replaceAll("'","");
+str_dup = str_dup.replace("[","");
+str_dup = str_dup.replace("]","");
+str_dup = str_dup.replaceAll("'","");
 
-	score[index] = score[index].replace("[","");
-    score[index] = score[index].replace("]","");
-    score[index] = score[index].replaceAll("'","");
+score = score.replace("[","");
+score = score.replace("]","");
 	
-	urls[index] = urls[index].replace("[","");
-    urls[index] = urls[index].replace("]","");
-    urls[index] = urls[index].replaceAll("'","");
+urls = urls.replace("[","");
+urls = urls.replace("]","");
+urls = urls.replaceAll("'","")
+
+const arr_relate =  str_rel.split(", ");
+const arr_duplicate =  str_dup.split(", ");
+const arr_score =  score.split(", ");
+const arr_urls =  urls.split(", ");
     
-    const arr_relate =  str_rel[index].split(", ");
-    const arr_duplicate =  str_dup[index].split(", ");
-	const arr_score =  score[index].split(", ");
-    const arr_urls =  urls[index].split(", ");
-    
-    const relate_list = arr_relate;
-    const duplicate = arr_duplicate;
+const relate_list = arr_relate;
+const duplicate = arr_duplicate;
+	
+for (let index in str_rel){
     
     let str = "";
-    for (let text in relate_list){
+    for (let text in relate_list[index]){
         if (duplicate.includes(relate_list[text])) {
           str += '<mark>'+relate_list[text]+'</mark>';
         } else {
@@ -38,6 +38,8 @@ for (let index in str_rel){
         }
     }
     console.log(str);
+	console.log(arr_relate);
+	console.log(arr_duplicate);
     console.log(arr_score);
     console.log(arr_urls);
     document.getElementById("relate_text").innerHTML += str;   
