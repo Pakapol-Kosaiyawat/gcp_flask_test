@@ -27,7 +27,7 @@ for (let index in str_rel){
           str += relate[text] ;
         }
     };
-    document.getElementById("relate_text").innerHTML = str;   
-    document.getElementById("score").innerHTML = score[index];
-    document.getElementById("urls").innerHTML = url[index];
+    document.getElementById("relate_text").innerHTML += str;   
+    document.getElementById("score").innerHTML += score[index];
+    document.getElementById("urls").innerHTML += url[index];
 };
