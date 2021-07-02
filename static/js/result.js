@@ -5,13 +5,13 @@ var score = document.getElementById("score").innerHTML;
 var urls = document.getElementById("urls").innerHTML;
 
 for (let index in str_rel){
-    str_rel[index] = str_rel.replace("[","");
-    str_rel[index] = str_rel.replace("]","");
-    str_rel[index] = str_rel.replaceAll("'","");
+    str_rel[index] = str_rel[index].replace("[","");
+    str_rel[index] = str_rel[index].replace("]","");
+    str_rel[index] = str_rel[index].replaceAll("'","");
     
-    str_dup[index] = str_dup.replace("[","");
-    str_dup[index] = str_dup.replace("]","");
-    str_dup[index] = str_dup.replaceAll("'","");
+    str_dup[index] = str_dup[index].replace("[","");
+    str_dup[index] = str_dup[index].replace("]","");
+    str_dup[index] = str_dup[index].replaceAll("'","");
     
     const arr_relate =  str_rel[index].split(", ");
     const arr_duplicate =  str_dup[index].split(", ");
