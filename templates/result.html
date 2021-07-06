@@ -4,55 +4,112 @@
         <meta charset='utf-8'>
         <title>Check Plagiarism</title>
         <link rel="stylesheet" href="/static/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
     </head>
     <body>
-    <center>
-            <br><br>
-            <h1>จากข้อมูลต้นฉบับ:</h1>
-        </center>
-            <p id = "input_text">{{Paragraph}}</p>
+
+        <!--Original-->
+        <div class="glassBG">
         <center>
-            <br><br>
-            <h1>คะแนนความใกล้เคียง:</h1>
-            <h1 id = "score0" >{{score[0]}}</h1>
-            <p>เมื่อเปรียบเทียบด้วยย่อหน้า: </p>
+            <h1 class="topic">จากข้อมูลต้นฉบับ</h1>
         </center>
-            <p id = "relate_text0" >{{Paragraph_relate[0]}}</p>
-            <p id = "duplicate0" hidden>{{duplicate[0]}}</p>
+            <div class="paragraphOrigin">
+                <p id = "input_text">{{Paragraph}}</p>  
+            </div> 
+        </div>
+
+        <div class="glassBG">
+        <!--Part 1-->
+        <center>
+            <div class="scoreBlock">
+                <h1>คะแนนความใกล้เคียง</h1>
+                <h1 id = "score0" >{{score[0]}}</h1>
+            </div>    
+
+            <h1 class="topicTwo">เมื่อเปรียบเทียบด้วยย่อหน้า</h1>
+            
+        </center>
+
+            <div class="paragraphOriginTwo">
+                <p id = "relate_text0" >{{Paragraph_relate[0]}}</p>
+                <p id = "duplicate0" hidden>{{duplicate[0]}}</p>
+            </div>
+
         <center>        
-            <p>จาก</p>
+            <h1 class="topicFromTwo">จาก</h1>
         </center>
+
+        <div class="paragraphOriginTwo">
             <a href={{url[0]}} target="_blank" id ="urls0" >{{url[0]}}</a>
+        </div>
+
+        </div>
+        <!--N Part 1-->
+         
+
+        <div class="glassBG">
+        <!--Part 2-->
         <center>
-            <br><br>
-            <h1>คะแนนความใกล้เคียง:</h1>
-            <h1 id = "score1" >{{score[1]}}</h1>
-            <p>เมื่อเปรียบเทียบด้วยย่อหน้า: </p>
+            <br>
+            <div class="scoreBlockTwo">
+                <h1>คะแนนความใกล้เคียง:</h1>
+                <h1 id = "score1" >{{score[1]}}</h1>
+            </div>  
+            
+            <h1 class="topicThree">เมื่อเปรียบเทียบด้วยย่อหน้า</h1>
+            
         </center>
-            <p id = "relate_text1" >{{Paragraph_relate[1]}}</p>
-            <p id = "duplicate1" hidden>{{duplicate[1]}}</p>
+
+            <div class="paragraphOriginThree">
+                <p id = "relate_text1" >{{Paragraph_relate[1]}}</p>
+                <p id = "duplicate1" hidden>{{duplicate[1]}}</p>
+            </div>
+
         <center>        
-            <p>จาก</p>
+            <h1 class="topicFromThree">จาก</h1>
         </center>
+
+        <div class="paragraphOriginThree">
             <a href={{url[1]}} target="_blank" id ="urls1" >{{url[1]}}</a>
+        </div>
+        </div>
+        <!--N Part 2-->
+         
+
+        <div class="glassBG">
+        <!--Part 3-->
         <center>
-            <br><br>
-            <h1>คะแนนความใกล้เคียง:</h1>
-            <h1 id = "score2" >{{score[2]}}</h1>
-            <p>เมื่อเปรียบเทียบด้วยย่อหน้า: </p>
+            <br>
+            <div class="scoreBlockThree">
+                <h1>คะแนนความใกล้เคียง:</h1>
+                <h1 id = "score2" >{{score[2]}}</h1>
+            </div>  
+
+        <h1 class="topicFour">เมื่อเปรียบเทียบด้วยย่อหน้า</h1>
+            
         </center>
-            <p id = "relate_text2" >{{Paragraph_relate[2]}}</p>
-            <p id = "duplicate2" hidden>{{duplicate[2]}}</p>
+
+            <div class="paragraphOriginFour">
+                <p id = "relate_text2" >{{Paragraph_relate[2]}}</p>
+                <p id = "duplicate2" hidden>{{duplicate[2]}}</p>
+            </div>
+
         <center>        
-            <p>จาก</p>
+            <h1 class="topicFromFour">จาก</h1>
         </center>
+
+        <div class="paragraphOriginFour">
             <a href={{url[2]}} target="_blank" id ="urls2" >{{url[2]}}</a>
-            <br><br>
-            <br><br>
-            <br><br>
+        </div>
+        </div>
+        <!--N Part 3-->
+
+        <br><br>
+
         <center>        
-            <a href="/" class="link_button">กลับหน้าหลัก</a>
+            <a href="/" class="link_button" style="border-radius: 10px; box-shadow: 0 1px 1px rgb(0 0 0 / 11%), 0 2px 2px rgb(0 0 0 / 11%), 0 4px 4px rgb(0 0 0 / 11%), 0 6px 8px rgb(0 0 0 / 11%), 0 8px 16px rgb(0 0 0 / 11%);">กลับหน้าหลัก</a>
         </center>
+ 
         <script src="/static/js/result.js"></script>
     </body>
 </html>

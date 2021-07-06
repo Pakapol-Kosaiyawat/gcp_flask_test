@@ -4,18 +4,23 @@
         <meta charset='utf-8'>
         <title>Check Plagiarism</title>
         <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
     </head>
     <body>
         <center>
-            <br><br>
             <h1>ตรวจสอบการคัดลอก</h1>
-            <p>กรอกย่อหน้าที่ต้องการตรวจสอบในกล่องข้อความ</p>
+            <p class="text">กรอกย่อหน้าที่ต้องการตรวจสอบในกล่องข้อความ</p>
+
             <form method="POST">
-                <textarea id="text_area" name="text" rows="20" cols="100"></textarea>
+                <textarea id="text_area" name="text" rows="20" cols="100" class="shape"></textarea>
                 <br><br>
                 <input id="submit_button" type="submit" value="ตรวจสอบ" class="button">
+                
             </form>
         </center>
+           
         <p id="alert" hidden>{{alert}}</p>
         <script src = "/static/js/index.js"></script>
     </body>
