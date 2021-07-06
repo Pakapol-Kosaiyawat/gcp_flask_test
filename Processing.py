@@ -158,10 +158,31 @@ def detect_similarity(Article):
         duplicate_list.append(duplicate)
     
         
-    #select highest score source
-    Max_score = url_score_list
-    tokenized_maxpara = most_sim_list
-    Max_url = urls
-    duplicate = duplicate_list
+    #select 3 highest score source
+    #sort by score
+    for iter_num in range(len(url_score_list)-1,0,-1):
+        for idx in range(iter_num):
+            if url_score_list[idx]>url_score_list[idx+1]:
+                temp = url_score_list[idx]
+                url_score_list[idx] = url_score_list[idx+1]
+                url_score_list[idx+1] = temp
+               
+                temp = most_sim_list[idx]
+                most_sim_list[idx] = most_sim_list[idx+1]
+                most_sim_list[idx+1] = temp
+               
+                temp = urls[idx]
+                urls[idx] = urls[idx+1]
+                urls[idx+1] = temp
+                
+                temp = duplicate_list[idx]
+                duplicate_list[idx] = duplicate_list[idx+1]
+                duplicate_list[idx+1] = temp
+               
+               
+    Max_score = url_score_list[::-1]
+    tokenized_maxpara = most_sim_list[::-1]
+    Max_url = urls[::-1]
+    duplicate = duplicate_list[::-1]
     
     return ([Article,tokenized_maxpara,Max_url,Max_score,duplicate])

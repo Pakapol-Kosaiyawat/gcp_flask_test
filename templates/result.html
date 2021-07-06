@@ -6,29 +6,53 @@
         <link rel="stylesheet" href="/static/css/style.css">
     </head>
     <body>
-        <center>
+    <center>
             <br><br>
-            <p>จากข้อมูลต้นฉบับ:</p>
+            <h1>จากข้อมูลต้นฉบับ:</h1>
         </center>
             <p id = "input_text">{{Paragraph}}</p>
         <center>
             <br><br>
             <h1>คะแนนความใกล้เคียง:</h1>
-            <h1 id = "score" >{{score}}</h1>
-            <br><br>
+            <h1 id = "score0" >{{score[0]}}</h1>
             <p>เมื่อเปรียบเทียบด้วยย่อหน้า: </p>
         </center>
-            <p id = "relate_text" >{{Paragraph_relate}}</p>
-            <p id = "duplicate_text" >{{duplicate}}</p>  
+            <p id = "relate_text0" >{{Paragraph_relate[0]}}</p>
+            <p id = "duplicate0" hidden>{{duplicate[0]}}</p>
         <center>        
             <p>จาก</p>
         </center>
-            <a href={{url}} target="_blank" id ="urls" >{{url}}</a>
+            <a href={{url[0]}} target="_blank" id ="urls0" >{{url[0]}}</a>
         <center>
-            <!-- <script src = "/static/js/result.js"></script> -->
+            <br><br>
+            <h1>คะแนนความใกล้เคียง:</h1>
+            <h1 id = "score1" >{{score[1]}}</h1>
+            <p>เมื่อเปรียบเทียบด้วยย่อหน้า: </p>
+        </center>
+            <p id = "relate_text1" >{{Paragraph_relate[1]}}</p>
+            <p id = "duplicate1" hidden>{{duplicate[1]}}</p>
+        <center>        
+            <p>จาก</p>
+        </center>
+            <a href={{url[1]}} target="_blank" id ="urls1" >{{url[1]}}</a>
+        <center>
+            <br><br>
+            <h1>คะแนนความใกล้เคียง:</h1>
+            <h1 id = "score2" >{{score[2]}}</h1>
+            <p>เมื่อเปรียบเทียบด้วยย่อหน้า: </p>
+        </center>
+            <p id = "relate_text2" >{{Paragraph_relate[2]}}</p>
+            <p id = "duplicate2" hidden>{{duplicate[2]}}</p>
+        <center>        
+            <p>จาก</p>
+        </center>
+            <a href={{url[2]}} target="_blank" id ="urls2" >{{url[2]}}</a>
             <br><br>
             <br><br>
+            <br><br>
+        <center>        
             <a href="/" class="link_button">กลับหน้าหลัก</a>
         </center>
+        <script src="/static/js/result.js"></script>
     </body>
 </html>

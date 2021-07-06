@@ -5,6 +5,27 @@ html,body{
     margin-right: 30px;
 }
 
+h1 {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 40px;
+}
+
+p {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 24px;
+}
+
+a {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 24px;
+}
+
+textarea {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 20px;
+    padding-left: 0.8rem;
+}
+
 .button{
     font-family: 'Sarabun', sans-serif;
     background-color: green;
