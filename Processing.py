@@ -66,13 +66,10 @@ def detect_similarity(Article):
     #get 3 urls relate article
     def search_relate(query) :  
         urls = []
-        for j in search(query, num=10 , stop=10, pause=2):
+        for j in search(query, num_results =5):
             if('.pdf'not in j and '/file?type=supplementary'not in j and 'siam.wiki'not in j and 'download' not in j):
-                if(len(urls) == 0):
-                    urls.append(j)
-                elif(len(urls) > 0 and len(urls) < 3): 
-                    if(check_plagiarized(j,urls[-1])[0]<0.4):
-                        urls.append(j)
+                urls.append(j)
+                
         return urls
     
     #extact paragraph from url and apply check_plagiarized function
